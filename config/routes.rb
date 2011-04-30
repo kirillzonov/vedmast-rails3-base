@@ -5,7 +5,7 @@ Rails3Base::Application.routes.draw do
 
   resources :categories, :only => [:index, :show]
 
-  resources :articles, :only => [:index, :show]
+  resources :articles, :only => :show
 
   devise_for :users
 

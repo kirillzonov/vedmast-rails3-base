@@ -1,7 +1,17 @@
 <% title 'Listing categories' %>
 
 <% unless collection.all.blank? %>
-  <%= table_for(collection) %>
+  <% collection.each do |a|%>
+    <div class="items">
+      <div class="item-field">
+        <div class="item-pic"><%= image_tag(a.little_pic) %><span class="frame"><%= link_to nil, a, :class => "item-link" %></span></div>
+        <div class="item-desc">
+          <p><strong><%= link_to a.name, a %></strong></p>
+          <p><%= a.short %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
   <%= paginate(collection) %>
 <% else %>
   <p>Now it's time to create some data here. To create new entry, please use the button below.</p>
