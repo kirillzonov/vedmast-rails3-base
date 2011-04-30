@@ -1,0 +1,11 @@
+<%= semantic_form_for(resource, :validate => true) do |form| %>
+  <%= form.inputs do %>
+    <%= form.input :name %>
+    <%= form.input :email %>
+    <%= form.input :content %>
+    <%= form.input :answer %>
+    <%= form.input :visible %>
+  <% end %>
+
+  <%= form.buttons %> or <%= link_to 'cancel', resource %>
+<% end %>

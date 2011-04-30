@@ -1,4 +1,6 @@
 Rails3Base::Application.routes.draw do
+  resources :questions
+
   resources :information
 
   resources :categories
