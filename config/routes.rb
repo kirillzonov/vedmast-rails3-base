@@ -1,4 +1,10 @@
 Rails3Base::Application.routes.draw do
+  resources :questions
+
+  resources :information
+
+  resources :categories
+
   resources :articles
 
   devise_for :users

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @information.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @information.content %>
+</p>
+
+<p>
+  <b>Short:</b>
+  <%= @information.short %>
+</p>
+
+
+<%= link_to 'Edit', edit_information_path(@information) %> |
+<%= link_to 'Back', information_index_path %>
