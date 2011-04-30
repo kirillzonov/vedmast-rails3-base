@@ -1,4 +1,6 @@
 Rails3Base::Application.routes.draw do
+  resources :information
+
   resources :categories
 
   resources :articles
