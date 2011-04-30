@@ -7,10 +7,8 @@ Already member? <%= link_to 'Sign in here!', new_session_path(resource_name) %>
   <%= form.inputs do %>
     <%= form.input :full_name, :required => true %>
     <%= form.input :email, :required => true %>
-    <% if resource.password_required? %>
-      <%= form.input :password, :required => true %>
-      <%= form.input :password_confirmation, :required => true %>
-    <% end %>
+    <%= form.input :password, :required => true %>
+    <%= form.input :password_confirmation, :required => true %>
   <% end %>
 
   <%= form.buttons do %>
