@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   inherit_resources
+  actions :index, :show
 
   protected
 

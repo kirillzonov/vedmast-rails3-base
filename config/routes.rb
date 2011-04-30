@@ -1,9 +1,9 @@
 Rails3Base::Application.routes.draw do
-  resources :questions
+  resources :questions, :except => [:update, :delete]
 
-  resources :information
+  resources :informations, :only => [:index, :show]
 
-  resources :categories
+  resources :categories, :only => [:index, :show]
 
   resources :articles
 
