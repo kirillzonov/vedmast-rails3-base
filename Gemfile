@@ -14,6 +14,8 @@ gem 'flutie', '1.1.5'
 gem 'inherited_resources', '1.2.1'
 gem 'kaminari', '0.10.4'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'ruby-debug'
+gem "RedCloth", :require => 'redcloth'
 
 group :test, :development do
   gem 'mongrel', '1.2.0.pre2'

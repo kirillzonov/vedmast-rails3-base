@@ -1,10 +1,14 @@
-<% title 'Listing information' %>
+<% title 'Информация' %>
+<h1>О талисманах</h1>
 
 <% unless collection.all.blank? %>
-  <%= table_for(collection) %>
+  <% collection.each do |information| %>
+    <%= content_tag :p, link_to(information.title, information), :class => "title"%>
+    <%= content_tag :p, information.short %>
+  <% end %>
   <%= paginate(collection) %>
 <% else %>
-  <p>Now it's time to create some data here. To create new entry, please use the button below.</p>
+  <p>Пока нет статей.</p>
   <br /><br />
 <% end %>
 

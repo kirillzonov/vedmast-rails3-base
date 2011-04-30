@@ -1,20 +1,8 @@
-<p id="notice"><%= notice %></p>
+<% title 'Информация' %>
+<h1> <%= resource.title %> </h1>
+<div class="flexcroll" id="mycustomscroll2">
+  <%= raw sanitize RedCloth.new(resource.content).to_html %>
+</div>
 
-<p>
-  <b>Title:</b>
-  <%= @information.title %>
-</p>
+<%= link_to "Вернуться назад", :back, :class => "back-link" %>
 
-<p>
-  <b>Content:</b>
-  <%= @information.content %>
-</p>
-
-<p>
-  <b>Short:</b>
-  <%= @information.short %>
-</p>
-
-
-<%= link_to 'Edit', edit_information_path(@information) %> |
-<%= link_to 'Back', information_index_path %>
