@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   inherit_resources
   actions :only => [:index, :show]
+  @page = 'products'
 
   protected
 

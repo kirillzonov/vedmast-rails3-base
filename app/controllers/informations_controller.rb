@@ -1,6 +1,7 @@
 class InformationsController < ApplicationController
   inherit_resources
   actions :index, :show
+  @page = 'about'
 
   protected
 
