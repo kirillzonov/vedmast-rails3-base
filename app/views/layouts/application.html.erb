@@ -26,30 +26,50 @@
           $('div.picture a').fancyZoom({scaleImg: true, closeOnClick: true});
           $('#medium_box_link').fancyZoom({width:400, height:300});
           });
-        </script>
+</script>
   </head>
   <body>
-<!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
-<!--[if IE 7 ]>    <body class="ie ie7"> <![endif]-->
-<!--[if IE 8 ]>    <body class="ie ie8"> <![endif]-->
-<!--[if IE 9 ]>    <body class="ie ie9"> <![endif]-->
-  <!--[if (gt IE 9)|!(IE)]><!--> <body class=""> <!--<![endif]-->
+    <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+    <!--[if IE 7 ]>    <body class="ie ie7"> <![endif]-->
+    <!--[if IE 8 ]>    <body class="ie ie8"> <![endif]-->
+    <!--[if IE 9 ]>    <body class="ie ie9"> <![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!--> <body class=""> <!--<![endif]-->
     <div class="wrap">
       <div class="header">
         <h1><a href="#">Славянское Сердце</a></h1>
         <h2><a href="#">Древнеславянская языческая мастерская</a></h2>
         <div class="order"><%= link_to 'Заказать', root_path %></div>
       </div>
-        <%= render 'layouts/menu' %>
-      <hr />
+      <%= render 'layouts/menu' %>
       <%= render 'layouts/messages' %>
     </div>
 
-      <% if show_title? %>
-        <h1><%= yield(:title) %></h1>
-      <% end %>
+    <% if show_title? %>
+      <h1><%= yield(:title) %></h1>
+    <% end %>
 
+    <%= index_or_not(@page) %>
+    <div class="content">
       <%= yield %>
     </div>
+    <div class="content-after"></div>
+    <div class="new">
+      <h1>Новинки</h1>
+      <div class="contents">
+        <ul>
+          <% @new_articles.each do |a| %>
+            <li><%= link_to(image_tag(a.little_pic, :size => "160x120"), a )%></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="friends">
+      <h1>Друзья сайта</h1>
+      <div class="contents"></div>
+    </div>
+    <div class="counters-top"></div>
+    <div class="counters"></div>
+  </div>
+  </div>
   </body>
 </html>
