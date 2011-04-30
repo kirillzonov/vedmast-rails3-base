@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   inherit_resources
+  actions :only => [:index, :show]
 
   protected
 

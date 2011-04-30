@@ -1,5 +1,6 @@
-class InformationController < ApplicationController
+class InformationsController < ApplicationController
   inherit_resources
+  actions :index, :show
 
   protected
 

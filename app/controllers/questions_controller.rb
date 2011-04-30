@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   inherit_resources
+  actions :all, :except => [:update, :delete]
 
   protected
 
