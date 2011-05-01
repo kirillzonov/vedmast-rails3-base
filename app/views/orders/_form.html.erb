@@ -1,0 +1,19 @@
+<% title 'Оформление заказа' %>
+<h1>Оформление заказа</h1>
+<%= semantic_form_for(resource, :validate => true) do |form| %>
+<div class="flexcroll" id="mycustomscroll2">
+  <%= form.inputs do %>
+    <%= form.input :email %>
+    <%= form.input :firstname, :label => 'Ваше имя' %>
+    <%= form.input :lastname, :label => 'Ваша фамилия' %>
+    <%= form.input :fathername, :label => 'Ваше отчество' %>
+    <%= form.input :country, :label => 'Страна проживания', :priority_countries => ['Россия', 'Латвия', "Эстония", "Литва", "Украина", "Белоруссия", "Молдавия", "Грузия", "Армения", 'German', 'UK'] %>
+    <%= form.input :zipcode, :label => 'Почтовый индекс' %>
+    <%= form.input :phone, :label => 'Ваш телефон' %>
+    <%= form.input :address, :label => 'Ваш полный адрес' %>
+  <% end %>
+
+</div>
+  <%# TODO change label %>
+  <%= form.buttons %> or <%= link_to 'Отменить', resource %>
+<% end %>
