@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
   inherit_resources
-  actions :all, :except => [:update, :delete]
+  actions :index, :create, :new
   @page = 'faq'
 
   protected

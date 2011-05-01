@@ -1,16 +1,14 @@
-<% title 'Listing questions' %>
+<% title 'Вопросы и ответы' %>
+<h1>Вопросы и ответы</h1>
 
-<% unless collection.all.blank? %>
-  <%= table_for(collection) %>
-  <%= paginate(collection) %>
-<% else %>
-  <p>Now it's time to create some data here. To create new entry, please use the button below.</p>
-  <br /><br />
+<p><%= link_to 'Задать вопрос Мастеру', new_question_path %></p>
+<% collection.each do |question| %>
+  <p class="title">Посетитель: <%= question.name %> </p>
+  <p class="title">Время: <%= question.created_at.strftime("%H:%M %m/%d/%y") %> </p>
+  <p>Вопрос: <%= question.content %></p>
+  <% if question.answer %>
+    <p>Ответ: <%= question.answer %></p>
+  <% end %>
 <% end %>
-
-<br />
-
-<p>
-  <%= link_to 'New Question', new_question_path, :class => 'button' %>
-</p>
+<%= paginate(collection) %>
 
