@@ -1,5 +1,10 @@
 class ArticlesController < ApplicationController
   inherit_resources
+  actions :only => :show
+
+  def show
+    @page = 'product'
+  end
 
   protected
 

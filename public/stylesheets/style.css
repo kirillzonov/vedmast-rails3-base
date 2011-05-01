@@ -1,0 +1,88 @@
+/* CSS RESET */
+html{color:#000;background:#140a02;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0; z-index: 9;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+
+/* GLOBAL */
+
+.field_with_errors label.message {margin-left: 15px; color: red;}
+body { background: url(header2.jpg) no-repeat center top; font: normal 13px/16px "Times New Roman", serif;}
+h1 { font-style: italic; color: #000; font-size: 19px; line-height: 48px; text-align: center; }
+a { font-style: italic; color: #000; text-decoration: underline; }
+a:hover { text-decoration: none; }
+strong, b { font-weight: bold; }
+em, i { font-style: italic; }
+
+/* GENERAL */
+.back-link { font-size: 17px; }
+.wrap { width: 960px; margin: 0 auto; clear: both; }
+.wrap.for-content { width: 970px; margin: 0 auto; overflow: hidden; clear: both; }
+.wrap.for-content { background: url(bg-content-main.png) no-repeat center 20px; }
+.wrap.home { background: url(bg-content.png) no-repeat center -40px; }
+.simple_link {color: #E8B24D;}
+#mycustomscroll2 { width:590px; height:390px; padding-right: 10px; outline: 0; margin-bottom: 5px; }
+#mycustomscroll_product { width:590px; height:140px; padding-right: 10px; outline: 0; }
+.scrollgeneric { line-height: 1px; font-size: 1px; position: absolute; top: 0; left: 0; }
+.vscrollerbase { width: 10px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; background-color: #CDA364; border: 1px solid #B48E57 }
+.vscrollerbar { width: 10px; background-color:#B48E57; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; cursor: pointer; }
+.hscrollerbase { height: 10px; background-color: white; }
+.hscrollerbar { height: 10px; background-color: #FFFFFF; }
+.scrollerjogbox { width: 10px; height: 10px; top: auto; left: auto; bottom: 0px; right: 0px; background-color: gray; }
+
+/* HEADER */
+.header { position: relative; }
+.header h1 { width: 650px; height: 280px; display: block; overflow: hidden; text-indent: -9999px; margin: 0 0 0 40px; }
+.header h1 a { width: 100%; height: 100%; display: block; }
+.header h2 a { width: 509px; height: 71px; overflow: hidden; display: block; margin: 280px auto 0; text-indent: -9999px; background: url(title.png) no-repeat; }
+.header .order { position: absolute; top: 491px; right: 188px; }
+.header .order a { background: url(header-order.png) no-repeat; width: 107px; height: 87px; display: block; overflow: hidden; text-indent: -9999px; }
+
+/* MENU */
+.menu ul { margin: 0 125px; }
+.menu ul li { float: left; margin: 0 10px; }
+.menu ul li.products { position: relative; }
+.menu ul li.products ul { display: none; position: absolute; top: 50px; left: 0; width: 150px; margin: 0; background: #140a02; padding: 0 0 6px; -moz-box-shadow: 0px 0px 5px #ccc; -webkit-box-shadow: 0px 0px 5px #ccc; box-shadow: 0px 0px 5px #000; }
+.menu ul li.products ul li { text-align: center; width: 100%; clear: both; margin: 8px 0; }
+.menu ul li.products ul a { color: #fff; line-height: 14px; }
+
+/* CONTENT */
+.content { width: 660px; margin: 0 auto; overflow: hidden; min-height: 547px; }
+.home .content { color: #fff33b; margin-top: 0; font-size: 15px; }
+.home .content h1 { color: #fff33b;  }
+.static .content { width: 620px; min-height: 560px; margin-top: 80px; }
+.content-after { width: 100%; height: 30px; margin: 30px 0; background: url(content-bottom.png) no-repeat center bottom; }
+.content p.title { text-decoration: underline; font-weight: bold; }
+.content p { font-style: italic; }
+.about .content p, .faq .content p, .products .content p, .pagination { margin: 0 0 12px; }
+.pagination { font-weight: bold; }
+.products .items { width: 100%; overflow: hidden; }
+.products .items .item-field { margin: 0 0 10px; overflow: hidden; }
+.products .items .item-field .item-pic { float: left; width: 120px; height: 90px; position: relative; }
+.products .items .item-field .item-pic img { position: absolute; top: 2px; left: 7px; width: 80px; height: 72px;}
+.products .items .item-field .item-link { display: block; position: absolute; top: 2px; left: 7px; width: 80px; height: 72px; text-indent: -999px; }
+.products .items .item-field .item-pic .frame { background: url(frame.png) no-repeat; position: absolute; top: 0; left: 0; z-index: 10; width: 113px; height: 80px; display: block; overflow: hidden; }
+.products .items .item-field .item-desc { float: right; width: 490px; font-style: italic; }
+.product.agd h1 { no-repeat center top; height: 90px; overflow: hidden; }
+.product .item .info { overflow: hidden; }
+.product .item .info ul { float: left; margin: 40px 0 0; }
+.product .item .info ul li { font-size: 20px; line-height: 30px; }
+.product .item .info ul li strong { font-weight: normal; float: left; width: 110px; }
+.product .item .info .picture { float: right; background: url(item-bg.png) no-repeat; width: 323px; height: 220px; }
+.product .item .info .picture img { margin: 32px 0 0 48px; height: 165px;}
+.product .item .desc h2 { font-size: 20px; line-height: 30px; margin: 0 0 6px; }
+.product .item .desc p { margin: 0 0 12px; }
+.order_list { font-size: 20px; line-height: 30px; }
+
+/* NEW */
+.new { width: 960px; margin: 0 auto; overflow: hidden; }
+.new h1 { width: 121px; height: 51px; overflow: hidden; display: block; margin: 0 auto; text-indent: -9999px; background: url(title-new.png) no-repeat; }
+.new .contents { width: 952px; margin: 0 auto; overflow: hidden; background: url(content-new-frame.png) no-repeat; height: 227px; }
+.new .contents ul { margin: 66px 15px 0; overflow: hidden; text-align: center; }
+.new .contents ul li { display: inline; margin: 0 10px; overflow: hidden; }
+
+/* FRIENDS */
+.friends { width: 960px; margin: 50px auto 0; overflow: hidden; }
+.friends h1 { width: 168px; height: 64px; margin: 0 auto; overflow: hidden; text-indent: -9999px; background: url(title-friends.png) no-repeat; }
+.friends .contents { width: 943px; height: 102px; overflow: hidden; background: url(content-friends.png) no-repeat; margin: 20px auto; text-align: center; }
+
+/* COUNTERS */
+.counters-top { width: 100%; height: 13px; background: url(content-friends-separator.png) no-repeat center top; margin: 30px 0 20px; }
+.counters { width: 943px; height: 43px; overflow: hidden; margin: 0 auto 30px; background: url(content-counters.png) no-repeat; text-align: center; }

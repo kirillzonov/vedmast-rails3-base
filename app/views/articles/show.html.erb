@@ -1,25 +1,29 @@
-<p id="notice"><%= notice %></p>
+<div class="item">
+<div class="info">
+  <%= notice %>
+  <h1><%= resource.name %></h1>
+  <ul>
+    <li><strong>Размер:</strong><%= resource.size %>.</li>
+    <li><strong>Материал:</strong><%= resource.material %>.</li>
+    <li><strong>Цена:</strong><%= resource.price %> p.</li>
+    <li></li>
+    <li><%= link_to 'Добавить товар в корзину', order_path(resource.id), :onclick => "alert('Товар добавлен в корзину.')" %></li>
+  </ul>
+  <div class="picture">
+    <a href="#pic" title="Нажмите для увеличения">
+      <%= image_tag resource.little_pic %>
+    </a>
+  </div>
+</div>
+<div id="pic" style="display: none; z-index: 1200;">
+  <%= image_tag resource.little_pic, :size => "640x480"%>
+</div>
+<div class="desc">
+  <h2>Описание:</h2>
+  <div class="flexcroll" id="mycustomscroll_product">
+    <%= resource.full %>
+  </div>
+</div>
+<%= link_to "Вернуться назад", :back, :class => "back-link" %>
+</div>
 
-<p>
-  <b>Name:</b>
-  <%= @article.name %>
-</p>
-
-<p>
-  <b>Short:</b>
-  <%= @article.short %>
-</p>
-
-<p>
-  <b>Full:</b>
-  <%= @article.full %>
-</p>
-
-<p>
-  <b>Price:</b>
-  <%= @article.price %>
-</p>
-
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>

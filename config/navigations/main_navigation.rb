@@ -3,7 +3,10 @@ SimpleNavigation::Configuration.run do |navigation|
 
   navigation.items do |primary|
     primary.dom_class = 'main'
-    primary.item :dashboard, 'Dashboard', root_path
+    primary.item :dashboard, 'Главная', root_path
+    primary.item :informations, 'Информация', informations_path
+    primary.item :articles, 'Товары', articles_path
+    primary.item :questions, 'Вопросы', questions_path
 
   end
 end

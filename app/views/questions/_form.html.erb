@@ -1,0 +1,10 @@
+<%= semantic_form_for(resource, :validate => true) do |form| %>
+  <%= form.inputs do %>
+    <%= form.input :name, :label => 'Ваше имя' %>
+    <%= form.input :email, :label => 'Ваш e-mail (не будет показан посетителям)' %>
+    <%= form.input :content, :label => 'Ваш вопрос' %>
+  <% end %>
+
+  <%# TODO change label %>
+  <%= form.buttons %> или <%= link_to 'Отменить и вернуться назад', resource %>
+<% end %>

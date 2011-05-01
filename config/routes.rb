@@ -1,5 +1,13 @@
 Rails3Base::Application.routes.draw do
-  resources :articles
+  resources :orders
+
+  resources :questions, :except => [:update, :delete]
+
+  resources :informations, :only => [:index, :show]
+
+  resources :categories, :only => [:index, :show]
+
+  resources :articles, :only => :show
 
   devise_for :users
 

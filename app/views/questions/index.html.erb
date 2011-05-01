@@ -1,0 +1,14 @@
+<% title 'Вопросы и ответы' %>
+<h1>Вопросы и ответы</h1>
+
+<p><%= link_to 'Задать вопрос Мастеру', new_question_path %></p>
+<% collection.each do |question| %>
+  <p class="title">Посетитель: <%= question.name %> </p>
+  <p class="title">Время: <%= question.created_at.strftime("%H:%M %m/%d/%y") %> </p>
+  <p>Вопрос: <%= question.content %></p>
+  <% if question.answer %>
+    <p>Ответ: <%= question.answer %></p>
+  <% end %>
+<% end %>
+<%= paginate(collection) %>
+

@@ -10,13 +10,67 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110428073357) do
+ActiveRecord::Schema.define(:version => 20110501113318) do
 
   create_table "articles", :force => true do |t|
     t.string   "name"
     t.string   "short"
-    t.string   "full"
     t.integer  "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "pic"
+    t.integer  "category_id"
+    t.string   "material"
+    t.string   "little_pic"
+    t.string   "size"
+    t.text     "full"
+  end
+
+  create_table "articles_orders", :id => false, :force => true do |t|
+    t.integer "article_id"
+    t.integer "order_id"
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "information", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.string   "short"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "orders", :force => true do |t|
+    t.string   "email"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "fathername"
+    t.string   "country"
+    t.integer  "zipcode"
+    t.text     "address"
+    t.string   "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pages", :force => true do |t|
+    t.string   "name"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "questions", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "content"
+    t.text     "answer"
+    t.boolean  "visible"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

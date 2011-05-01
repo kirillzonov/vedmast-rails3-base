@@ -1,0 +1,18 @@
+<% title 'Корзина' %>
+<h1>Корзина</h1>
+
+<%= link_to 'Оформить заказ', new_order_path if @articles.present? %>
+
+<% unless @articles.blank? %>
+<ul>
+  <% @articles.each do |a| %>
+    <li><strong><%= link_to a.name, a, :class => 'order_list' %></strong><%= button_to 'Удалить из корзины', order_path(a.id), :method => :delete %></li>
+  <% end %>
+</ul>
+  <%= paginate(collection) %>
+<% else %>
+  <p>Корзина пуста.</p>
+  <p>Выберите товар прежде чем делать заказ.</p>
+  <br /><br />
+<% end %>
+

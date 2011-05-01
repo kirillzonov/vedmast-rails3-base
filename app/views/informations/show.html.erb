@@ -1,0 +1,8 @@
+<% title 'Информация' %>
+<h1> <%= resource.title %> </h1>
+<div class="flexcroll" id="mycustomscroll2">
+  <%= raw sanitize RedCloth.new(resource.content).to_html %>
+</div>
+
+<%= link_to "Вернуться назад", :back, :class => "back-link" %>
+
