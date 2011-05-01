@@ -7,7 +7,7 @@
     <li><strong>Материал:</strong><%= resource.material %>.</li>
     <li><strong>Цена:</strong><%= resource.price %> p.</li>
     <li></li>
-    <li><%= link_to 'Добавить товар в корзину', root_path, :onclick => "alert('Товар добавлен в корзину.')" %></li>
+    <li><%= link_to 'Добавить товар в корзину', order_path(resource.id), :onclick => "alert('Товар добавлен в корзину.')" %></li>
   </ul>
   <div class="picture">
     <a href="#pic" title="Нажмите для увеличения">
@@ -25,5 +25,5 @@
   </div>
 </div>
 <%= link_to "Вернуться назад", :back, :class => "back-link" %>
-                                                                                                                                    </div>
+</div>
 
