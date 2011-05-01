@@ -3,6 +3,12 @@ class QuestionsController < ApplicationController
   actions :index, :create, :new
   @page = 'faq'
 
+  def create
+    super do |format|
+      format.html { redirect_to(questions_path, :notice => 'Вопрос добавлен') }
+    end
+  end
+
   protected
 
   def collection
