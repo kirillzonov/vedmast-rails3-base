@@ -12,6 +12,7 @@ class OrdersController < ApplicationController
   def new
     @order = Order.new
     @order_sum = Article.find(session[:articles_id]).sum(&:price)
+    render 'new', :layout => "order", :title => "Оформление заказа"
   end
   def create
     @order = Order.new(params[:order])
