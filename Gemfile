@@ -16,6 +16,7 @@ gem 'kaminari', '0.10.4'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'ruby-debug'
 gem "RedCloth", :require => 'redcloth'
+gem 'mail'
 
 group :test, :development do
   gem 'mongrel', '1.2.0.pre2'

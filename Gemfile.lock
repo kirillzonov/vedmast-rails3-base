@@ -304,6 +304,7 @@ DEPENDENCIES
   jquery-rails (= 0.2.7)
   kaminari (= 0.10.4)
   launchy (= 0.4.0)
+  mail
   mongrel (= 1.2.0.pre2)
   mysql (= 2.8.1)
   omniauth (= 0.2.0)
