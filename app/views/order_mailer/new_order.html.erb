@@ -1,13 +1,13 @@
-Пользователь оставил заказ следующего содержания:
-ФИО: <%= @order.lastname %> <%= @order.firstname %> <%= @order.fathername %>
-Страна проживания: <%= @order.country %>
-Почтовый индекс: <%= @order.zipcode %>
-Адрес: <%= @order.address %>
-<% if @order.phone %>
-Телефон: <%= @order.phone %>
+Пользователь оставил заказ следующего содержания:<br>
+ФИО: <%= @order.lastname %> <%= @order.firstname %> <%= @order.fathername %><br>
+Страна проживания: <%= @order.country %><br>
+Почтовый индекс: <%= @order.zipcode %><br>
+Адрес: <%= @order.address %><br>
+<% if @order.phone.present? %>
+Телефон: <%= @order.phone %><br>
 <% end %>
 
-Товары:
+Товары:<br>
 <% @articles.each do |a| %>
   <%= a.name %>, 
 <% end %>
