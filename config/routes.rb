@@ -1,4 +1,4 @@
-Rails3Base::Application.routes.draw do
+DrevnMast::Application.routes.draw do
   resources :orders
 
   resources :questions, :except => [:update, :delete]

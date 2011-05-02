@@ -5,6 +5,7 @@ class QuestionsController < ApplicationController
 
   def create
     super do |format|
+      QuestionMailer.new_question(@question).deliver
       format.html { redirect_to(questions_path, :notice => 'Вопрос добавлен') }
     end
   end
