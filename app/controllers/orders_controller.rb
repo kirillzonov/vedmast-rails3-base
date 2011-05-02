@@ -18,6 +18,7 @@ class OrdersController < ApplicationController
     @order.articles = Article.find(session[:articles_id])
     respond_to do |format|
       if @order.save
+        OrderMailer.new_order(@order).deliver
         format.html { redirect_to(root_path, :notice => 'Мастер будет уведомлен о Вашем заказе.') }
         session[:articles_id] = nil
       else

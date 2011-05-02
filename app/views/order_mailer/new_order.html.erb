@@ -1,0 +1,13 @@
+Пользователь оставил заказ следующего содержания:
+ФИО: <%= @order.lastname %> <%= @order.firstname %> <%= @order.fathername %>
+Страна проживания: <%= @order.country %>
+Почтовый индекс: <%= @order.zipcode %>
+Адрес: <%= @order.address %>
+<% if @order.phone %>
+Телефон: <%= @order.phone %>
+<% end %>
+
+Товары:
+<% @articles.each do |a| %>
+  <%= a.name %>, 
+<% end %>
