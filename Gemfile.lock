@@ -300,6 +300,7 @@ DEPENDENCIES
   factory_girl_rails (= 1.0.1)
   flutie (= 1.1.5)
   formtastic
+  haml
   inherited_resources (= 1.2.1)
   jquery-rails (= 0.2.7)
   kaminari (= 0.10.4)

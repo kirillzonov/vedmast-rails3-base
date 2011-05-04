@@ -17,6 +17,7 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'ruby-debug'
 gem "RedCloth", :require => 'redcloth'
 gem 'mail'
+gem 'haml'
 
 group :test, :development do
   gem 'mongrel', '1.2.0.pre2'
