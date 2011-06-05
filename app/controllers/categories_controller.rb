@@ -9,6 +9,6 @@ class CategoriesController < ApplicationController
   protected
 
   def collection
-    @articles = @category.articles.page(params[:page])
+    @articles = resource.articles.page(params[:page])
   end
 end

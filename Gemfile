@@ -41,4 +41,5 @@ group :test, :development do
   gem 'rails3-generators', '0.17.4'
   gem 'rcov', '0.9.9'
   gem 'parallel_tests', '0.4.12'
+  gem 'ruby-debug'
 end
