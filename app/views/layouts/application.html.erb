@@ -64,7 +64,11 @@
       <div class="contents"></div>
     </div>
     <div class="counters-top"></div>
-    <div class="counters"></div>
+    <div class="counters">
+      <% @ads.each do |ad| %>
+        <%= raw ad.code %>
+      <% end %>
+    </div>
   </div>
   </div>
   </body>
