@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
   helper_method :get_categories
+  helper_method :get_ads
+  before_filter :get_ads
   before_filter :get_categories
   before_filter :get_new_articles
   protect_from_forgery
@@ -15,5 +17,9 @@ class ApplicationController < ActionController::Base
 
   def get_categories
     @categories = Category.all
+  end
+
+  def get_ads
+    @ads = Ad.all
   end
 end
