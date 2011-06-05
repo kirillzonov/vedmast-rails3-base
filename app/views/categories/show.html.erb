@@ -2,7 +2,7 @@
 <h1><%= resource.title %></h1>
 
 <% unless resource.articles.all.blank? %>
-  <% resource.articles.each do |a|%>
+  <% collection.each do |a|%>
     <div class="items">
       <div class="item-field">
         <div class="item-pic"><%= image_tag(a.pic, :size => "160x120") %><span class="frame"><%= link_to nil, a, :class => "item-link" %></span></div>
