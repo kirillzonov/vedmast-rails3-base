@@ -1,11 +1,11 @@
 DrevnMast::Application.routes.draw do
-  resources :orders
+  resources :orders, :except => :edit
 
   resources :questions, :except => [:update, :delete]
 
   resources :informations, :only => [:index, :show]
 
-  resources :categories, :only => [:index, :show]
+  resources :categories, :only => :show
 
   resources :articles, :only => :show
 

@@ -30,18 +30,23 @@ footer, header, hgroup, menu, nav, section {
 nav ul {
   list-style: none; }
 
-#show_help { font-size: 20px; float:right;}
+#show_help {
+  font-size: 20px;
+  float:right;
+  cursor: pointer;
+}
 #order_help { 
   background: #dadada;
   width: 665px; 
   height: 400px; 
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
-  border: 1px solid #ddd;
+  border: 1px solid black;
   margin-bottom: 1em;
   position: absolute;
   top: 120px;
   left: 285px;
+  cursor: pointer;
 }
 #close_help { 
   float:right;
