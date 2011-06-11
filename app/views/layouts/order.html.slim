@@ -12,7 +12,7 @@ html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
     .content
       = render 'layouts/messages'
       = yield
-= capture :javascript do
+javascript:
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-23872959-1']);
   _gaq.push(['_trackPageview']);

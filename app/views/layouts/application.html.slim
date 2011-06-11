@@ -54,7 +54,7 @@ html
       - @ads.each do |ad|
         = raw ad.code
 
-= capture :javascript do
+javascript:
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-23872959-1']);
   _gaq.push(['_trackPageview']);
