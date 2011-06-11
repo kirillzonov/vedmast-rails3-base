@@ -1,0 +1,28 @@
+.item
+  .info
+    h1 = resource.name
+    ul
+      li
+        strong Размер:
+        #{resource.size}.
+      li
+        strong Материал:
+        #{resource.material}.
+      li
+        strong Цена:
+        #{resource.price}.
+      li
+      li = link_to 'Добавить товар в корзину', \
+          order_path(resource.id), :onclick => "alert('Товар добавлен в корзину.')"
+          
+    .picture
+      a href="#pic" title="Нажмите для увеличения"
+        = image_tag resource.pic
+  #pic style="display: none; z-index: 1200;"
+    = image_tag resource.pic, :size => "640x480"
+  .desc
+    h2 Описание:
+    #mycustomscroll_product.flexcroll
+      = resource.full
+  = link_to "Вернуться назад", :back, :class => "back-link"
+

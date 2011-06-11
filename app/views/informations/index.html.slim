@@ -1,0 +1,13 @@
+- title 'Информация'
+h1 О талисманах
+
+- unless collection.all.blank?
+  - collection.each do |information|
+    = content_tag :p, link_to(information.title, information), :class => "title"
+    = content_tag :p, information.short
+  = paginate(collection)
+- else
+  p Пока нет статей.
+
+br
+
