@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   inherit_resources
-  actions :index, :show
+  actions :show
 
   def show 
     @page = 'products'

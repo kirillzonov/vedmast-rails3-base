@@ -1,0 +1,10 @@
+.menu
+  ul
+    li = link_to(image_tag("menu-home.png",:size => "150x47"), root_path)
+    li = link_to(image_tag("menu-info.png",:size => "150x47"), informations_path)
+    li class="products"
+      = image_tag("menu-products.png",:size => "150x47")
+      ul
+        - @categories.each do |cat|
+          li = link_to cat.title, cat
+    li = link_to(image_tag("menu-faq.png",:size => "150x47"), questions_path)

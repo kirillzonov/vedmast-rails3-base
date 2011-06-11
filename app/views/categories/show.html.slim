@@ -1,0 +1,19 @@
+- title resource.title
+h1 = resource.title
+
+- unless resource.articles.all.blank?
+  - resource.articles.each do |a|
+    .items
+      .item-field
+        .item-pic 
+          = image_tag(a.pic, :size => "160x120")
+          span class="frame"
+            = link_to nil, a, :class => "item-link"
+        .item-desc
+          p 
+            strong = link_to a.name, a
+          p = a.short
+  = paginate(collection)
+- else
+  p Здесь пока нет товаров
+
