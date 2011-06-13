@@ -1,0 +1,12 @@
+- title 'Вопросы и ответы'
+h1 Вопросы и ответы
+
+p = link_to 'Задать вопрос Мастеру', new_question_path
+- collection.each do |question|
+  p class="title" Посетитель: #{ question.name }
+  p class="title" Время: #{ question.created_at.strftime("%H:%M %m/%d/%y") }
+  p Вопрос: #{ question.content }
+  - if question.answer
+    p Ответ: #{ question.answer }
+= raw paginate(collection)
+

@@ -13,7 +13,7 @@ h1 = resource.title
           p 
             strong = link_to a.name, a
           p = a.short
-  = paginate(collection)
+  = raw paginate(collection)
 - else
   p Здесь пока нет товаров
 
